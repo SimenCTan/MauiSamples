@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TelerikExpander.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
+    xmlns:viewmodels="clr-namespace:TelerikExpander.ViewModels"
+    x:DataType="viewmodels:MainPageViewModel">
+
+    <Grid
+        Padding="10"
+        RowDefinitions="auto,auto,auto,auto,auto"
+        RowSpacing="5">
+        <telerik:RadExpander HeaderText="Person1 Collection">
+            <telerik:RadExpander.Content>
+                <VerticalStackLayout Spacing="10">
+                    <telerik:RadEntry x:Name="test"
+                        Margin="{OnPlatform MacCatalyst='10,10,-20,10',
+                                            Default='10'}"
+                        HorizontalOptions="End"
+                        Placeholder="search"
+                        WidthRequest="280" />
+                    <telerik:RadDataGrid
+                        AutoGenerateColumns="False"
+                        ItemsSource="{Binding Person1Collection}"
+                        SelectionMode="Single"
+                        UserEditMode="None"
+                        UserFilterMode="Disabled"
+                        UserGroupMode="Disabled">
+                        <telerik:RadDataGrid.Columns>
+                            <telerik:DataGridTextColumn HeaderText="Name" PropertyName="Name">
+                                <telerik:DataGridColumn.CellContentTemplate>
+                                    <DataTemplate>
+                                        <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Name}" />
+                                    </DataTemplate>
+                                </telerik:DataGridColumn.CellContentTemplate>
+                            </telerik:DataGridTextColumn>
+
+                            <telerik:DataGridTextColumn HeaderText="Age" PropertyName="Age">
+                                <telerik:DataGridColumn.CellContentTemplate>
+                                    <DataTemplate>
+                                        <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Age}" />
+                                    </DataTemplate>
+                                </telerik:DataGridColumn.CellContentTemplate>
+                            </telerik:DataGridTextColumn>
+
+                            <telerik:DataGridTextColumn HeaderText="Department" PropertyName="Department">
+                                <telerik:DataGridColumn.CellContentTemplate>
+                                    <DataTemplate>
+                                        <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Department}" />
+                                    </DataTemplate>
+                                </telerik:DataGridColumn.CellContentTemplate>
+                            </telerik:DataGridTextColumn>
+
+                        </telerik:RadDataGrid.Columns>
+                    </telerik:RadDataGrid>
+                </VerticalStackLayout>
+            </telerik:RadExpander.Content>
+        </telerik:RadExpander>
+        <telerik:RadExpander Grid.Row="1" HeaderText="Person2 Collection">
+            <telerik:RadExpander.Content>
+                <VerticalStackLayout Spacing="10">
+                    <telerik:RadEntry
+                        x:Name="test2"
+                        Margin="{OnPlatform MacCatalyst='10,10,-20,10',
+                                            Default='10'}"
+                        HorizontalOptions="End"
+                        Placeholder="search"
+                        WidthRequest="280" />
+                    <telerik:RadDataGrid
+                        AutoGenerateColumns="False"
+                        ItemsSource="{Binding Person2Collection}"
+                        SelectionMode="Single"
+                        UserEditMode="None"
+                        UserFilterMode="Disabled"
+                        UserGroupMode="Disabled">
+                        <telerik:RadDataGrid.Columns>
+                            <telerik:DataGridTextColumn HeaderText="Name" PropertyName="Name">
+                                <telerik:DataGridColumn.CellContentTemplate>
+                                    <DataTemplate>
+                                        <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Name}" />
+                                    </DataTemplate>
+                                </telerik:DataGridColumn.CellContentTemplate>
+                            </telerik:DataGridTextColumn>
+
+                            <telerik:DataGridTextColumn HeaderText="Age" PropertyName="Age">
+                                <telerik:DataGridColumn.CellContentTemplate>
+                                    <DataTemplate>
+                                        <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Age}" />
+                                    </DataTemplate>
+                                </telerik:DataGridColumn.CellContentTemplate>
+                            </telerik:DataGridTextColumn>
+
+                            <telerik:DataGridTextColumn HeaderText="Department" PropertyName="Department">
+                                <telerik:DataGridColumn.CellContentTemplate>
+                                    <DataTemplate>
+                                        <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Department}" />
+                                    </DataTemplate>
+                                </telerik:DataGridColumn.CellContentTemplate>
+                            </telerik:DataGridTextColumn>
+
+                        </telerik:RadDataGrid.Columns>
+                    </telerik:RadDataGrid>
+                </VerticalStackLayout>
+            </telerik:RadExpander.Content>
+        </telerik:RadExpander>
+        <telerik:RadExpander Grid.Row="2" HeaderText="Person3 Collection">
+            <telerik:RadExpander.Content>
+                <VerticalStackLayout Spacing="10">
+                    <telerik:RadEntry
+                        x:Name="test3"
+                        Margin="{OnPlatform MacCatalyst='10,10,-20,10',
+                                            Default='10'}"
+                        HorizontalOptions="End"
+                        Placeholder="search"
+                        WidthRequest="280" />
+                    <telerik:RadDataGrid
+                        AutoGenerateColumns="False"
+                        ItemsSource="{Binding Person3Collection}"
+                        SelectionMode="Single"
+                        UserEditMode="None"
+                        UserFilterMode="Disabled"
+                        UserGroupMode="Disabled">
+                        <telerik:RadDataGrid.Columns>
+                            <telerik:DataGridTextColumn HeaderText="Name" PropertyName="Name">
+                                <telerik:DataGridColumn.CellContentTemplate>
+                                    <DataTemplate>
+                                        <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Name}" />
+                                    </DataTemplate>
+                                </telerik:DataGridColumn.CellContentTemplate>
+                            </telerik:DataGridTextColumn>
+
+                            <telerik:DataGridTextColumn HeaderText="Age" PropertyName="Age">
+                                <telerik:DataGridColumn.CellContentTemplate>
+                                    <DataTemplate>
+                                        <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Age}" />
+                                    </DataTemplate>
+                                </telerik:DataGridColumn.CellContentTemplate>
+                            </telerik:DataGridTextColumn>
+
+                            <telerik:DataGridTextColumn HeaderText="Department" PropertyName="Department">
+                                <telerik:DataGridColumn.CellContentTemplate>
+                                    <DataTemplate>
+                                        <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Department}" />
+                                    </DataTemplate>
+                                </telerik:DataGridColumn.CellContentTemplate>
+                            </telerik:DataGridTextColumn>
+
+                        </telerik:RadDataGrid.Columns>
+                    </telerik:RadDataGrid>
+                </VerticalStackLayout>
+            </telerik:RadExpander.Content>
+        </telerik:RadExpander>
+        <telerik:RadExpander Grid.Row="3" HeaderText="Person4 Collection">
+            <telerik:RadExpander.Content>
+                <VerticalStackLayout Spacing="10">
+                    <telerik:RadEntry
+                        x:Name="test4"
+                        Margin="{OnPlatform MacCatalyst='10,10,-20,10',
+                                            Default='10'}"
+                        HorizontalOptions="End"
+                        Placeholder="search"
+                        WidthRequest="280" />
+                    <telerik:RadDataGrid
+                        AutoGenerateColumns="False"
+                        ItemsSource="{Binding Person4Collection}"
+                        SelectionMode="Single"
+                        UserEditMode="None"
+                        UserFilterMode="Disabled"
+                        UserGroupMode="Disabled">
+                        <telerik:RadDataGrid.Columns>
+                            <telerik:DataGridTextColumn HeaderText="Name" PropertyName="Name">
+                                <telerik:DataGridColumn.CellContentTemplate>
+                                    <DataTemplate>
+                                        <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Name}" />
+                                    </DataTemplate>
+                                </telerik:DataGridColumn.CellContentTemplate>
+                            </telerik:DataGridTextColumn>
+
+                            <telerik:DataGridTextColumn HeaderText="Age" PropertyName="Age">
+                                <telerik:DataGridColumn.CellContentTemplate>
+                                    <DataTemplate>
+                                        <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Age}" />
+                                    </DataTemplate>
+                                </telerik:DataGridColumn.CellContentTemplate>
+                            </telerik:DataGridTextColumn>
+
+                            <telerik:DataGridTextColumn HeaderText="Department" PropertyName="Department">
+                                <telerik:DataGridColumn.CellContentTemplate>
+                                    <DataTemplate>
+                                        <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Department}" />
+                                    </DataTemplate>
+                                </telerik:DataGridColumn.CellContentTemplate>
+                            </telerik:DataGridTextColumn>
+
+                        </telerik:RadDataGrid.Columns>
+                    </telerik:RadDataGrid>
+                </VerticalStackLayout>
+            </telerik:RadExpander.Content>
+        </telerik:RadExpander>
+        <telerik:RadExpander Grid.Row="4" HeaderText="Person5 Collection">
+            <telerik:RadExpander.Content>
+                <VerticalStackLayout Spacing="10">
+                    <telerik:RadEntry
+                        x:Name="test5"
+                        Margin="{OnPlatform MacCatalyst='10,10,-20,10',
+                                            Default='10'}"
+                        HorizontalOptions="End"
+                        Placeholder="search"
+                        WidthRequest="280" />
+                    <telerik:RadDataGrid
+                        AutoGenerateColumns="False"
+                        ItemsSource="{Binding Person5Collection}"
+                        SelectionMode="Single"
+                        UserEditMode="None"
+                        UserFilterMode="Disabled"
+                        UserGroupMode="Disabled">
+                        <telerik:RadDataGrid.Columns>
+                            <telerik:DataGridTextColumn HeaderText="Name" PropertyName="Name">
+                                <telerik:DataGridColumn.CellContentTemplate>
+                                    <DataTemplate>
+                                        <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Name}" />
+                                    </DataTemplate>
+                                </telerik:DataGridColumn.CellContentTemplate>
+                            </telerik:DataGridTextColumn>
+
+                            <telerik:DataGridTextColumn HeaderText="Age" PropertyName="Age">
+                                <telerik:DataGridColumn.CellContentTemplate>
+                                    <DataTemplate>
+                                        <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Age}" />
+                                    </DataTemplate>
+                                </telerik:DataGridColumn.CellContentTemplate>
+                            </telerik:DataGridTextColumn>
+
+                            <telerik:DataGridTextColumn HeaderText="Department" PropertyName="Department">
+                                <telerik:DataGridColumn.CellContentTemplate>
+                                    <DataTemplate>
+                                        <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Department}" />
+                                    </DataTemplate>
+                                </telerik:DataGridColumn.CellContentTemplate>
+                            </telerik:DataGridTextColumn>
+
+                        </telerik:RadDataGrid.Columns>
+                    </telerik:RadDataGrid>
+                </VerticalStackLayout>
+            </telerik:RadExpander.Content>
+        </telerik:RadExpander>
+    </Grid>
+
+</ContentPage>
