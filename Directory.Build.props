@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+	<PropertyGroup>
+		<TargetFrameworks>net7.0-maccatalyst;net7.0-ios</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<Nullable>enable</Nullable>
+        <NoWarn>CS8602,CS8604,CS8618,CS8600,CS8603</NoWarn>
+		<TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">15.2</SupportedOSPlatformVersion>
+        <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+	</PropertyGroup>
+    <PropertyGroup>
+        <AccelerateBuildsInVisualStudio>true</AccelerateBuildsInVisualStudio>
+    </PropertyGroup>
+	<PropertyGroup Condition="$(TargetFramework.Contains('-windows')) and '$(Configuration)' == 'Release'">
+		<GenerateAppxPackageOnBuild>true</GenerateAppxPackageOnBuild>
+		<AppxPackageSigningEnabled>False</AppxPackageSigningEnabled>
+	</PropertyGroup>
+    <PropertyGroup  Condition="'$(TargetFramework)' == 'net7.0-maccatalyst' and '$(Configuration)' == 'Release'">
+        <EnableCodeSigning>true</EnableCodeSigning>
+        <CreatePackage>true</CreatePackage>
+        <!-- for Mac Catalyst x64 -->
+        <!-- <RuntimeIdentifiers>maccatalyst-x64</RuntimeIdentifiers> -->
+
+        <!-- for Mac ARM -->
+        <!-- <runtimeidentifiers>maccatalyst-arm64</runtimeidentifiers> -->
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <RunAOTCompilation>true</RunAOTCompilation>
+        <EnableLLVM>true</EnableLLVM>
+    </PropertyGroup>
+</Project>

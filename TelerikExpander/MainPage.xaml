@@ -14,7 +14,8 @@
         <telerik:RadExpander HeaderText="Person1 Collection">
             <telerik:RadExpander.Content>
                 <VerticalStackLayout Spacing="10">
-                    <telerik:RadEntry x:Name="test"
+                    <telerik:RadEntry
+                        x:Name="test"
                         Margin="{OnPlatform MacCatalyst='10,10,-20,10',
                                             Default='10'}"
                         HorizontalOptions="End"
