@@ -6,6 +6,9 @@
     xmlns:controls="clr-namespace:OfficeControlGallery.Controls"
     Title="ControlTemplatePage">
     <ContentPage.Resources>
+        <DataTemplate x:Key="CardViewDataTemplate">
+            <controls:CardControl/>
+        </DataTemplate>
         <ControlTemplate x:Key="CardViewControlTemplate">
             <Frame
                 Padding="8"

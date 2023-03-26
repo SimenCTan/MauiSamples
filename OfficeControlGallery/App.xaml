@@ -12,7 +12,7 @@
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <ControlTemplate x:Key="TealTemplate">
-                <controls:TealControl HeaderText="Test"/>
+                <controls:TealControl/>
             </ControlTemplate>
         </ResourceDictionary>
     </Application.Resources>

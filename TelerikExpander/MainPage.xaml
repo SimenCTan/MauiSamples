@@ -23,20 +23,21 @@
                         WidthRequest="280" />
                     <telerik:RadDataGrid
                         x:Name="test1dg"
-                        CurrentCellStyle="{StaticResource DgCurrentCellStyle}"
-                        MouseHoverStyle="{StaticResource DgMouseHoverStyle}"
-                        SelectionStyle="{StaticResource DgRowSelectedStyle}"
                         AutoGenerateColumns="False"
+                        CurrentCellStyle="{StaticResource DgCurrentCellStyle}"
                         ItemsSource="{Binding Person1Collection}"
+                        MouseHoverStyle="{StaticResource DgMouseHoverStyle}"
                         SelectionMode="Single"
+                        SelectionStyle="{StaticResource DgRowSelectedStyle}"
                         UserEditMode="None"
                         UserFilterMode="Disabled"
                         UserGroupMode="Disabled">
                         <telerik:RadDataGrid.Columns>
-                            <telerik:DataGridTextColumn HeaderText="Name" 
-                                                        CellContentStyle="{StaticResource DgTextCellStyle}"
-                                                        HeaderStyle="{StaticResource DgHeaderCellStyle}"
-                                                        PropertyName="Name">
+                            <telerik:DataGridTextColumn
+                                CellContentStyle="{StaticResource DgTextCellStyle}"
+                                HeaderStyle="{StaticResource DgHeaderCellStyle}"
+                                HeaderText="Name"
+                                PropertyName="Name">
                                 <telerik:DataGridColumn.CellContentTemplate>
                                     <DataTemplate>
                                         <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Name}" />
@@ -44,10 +45,11 @@
                                 </telerik:DataGridColumn.CellContentTemplate>
                             </telerik:DataGridTextColumn>
 
-                            <telerik:DataGridTextColumn HeaderText="Age"
-                                                        CellContentStyle="{StaticResource DgTextCellStyle}"
-                                                        HeaderStyle="{StaticResource DgHeaderCellStyle}"
-                                                        PropertyName="Age">
+                            <telerik:DataGridTextColumn
+                                CellContentStyle="{StaticResource DgTextCellStyle}"
+                                HeaderStyle="{StaticResource DgHeaderCellStyle}"
+                                HeaderText="Age"
+                                PropertyName="Age">
                                 <telerik:DataGridColumn.CellContentTemplate>
                                     <DataTemplate>
                                         <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Age}" />
@@ -55,10 +57,11 @@
                                 </telerik:DataGridColumn.CellContentTemplate>
                             </telerik:DataGridTextColumn>
 
-                            <telerik:DataGridTextColumn HeaderText="Department" 
-                                                        CellContentStyle="{StaticResource DgTextCellStyle}"
-                                                        HeaderStyle="{StaticResource DgHeaderCellStyle}"
-                                                        PropertyName="Department">
+                            <telerik:DataGridTextColumn
+                                CellContentStyle="{StaticResource DgTextCellStyle}"
+                                HeaderStyle="{StaticResource DgHeaderCellStyle}"
+                                HeaderText="Department"
+                                PropertyName="Department">
                                 <telerik:DataGridColumn.CellContentTemplate>
                                     <DataTemplate>
                                         <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Department}" />
@@ -83,20 +86,21 @@
                         WidthRequest="280" />
                     <telerik:RadDataGrid
                         x:Name="test2dg"
-                        CurrentCellStyle="{StaticResource DgCurrentCellStyle}"
-                        MouseHoverStyle="{StaticResource DgMouseHoverStyle}"
-                        SelectionStyle="{StaticResource DgRowSelectedStyle}"
                         AutoGenerateColumns="False"
+                        CurrentCellStyle="{StaticResource DgCurrentCellStyle}"
                         ItemsSource="{Binding Person2Collection}"
+                        MouseHoverStyle="{StaticResource DgMouseHoverStyle}"
                         SelectionMode="Single"
+                        SelectionStyle="{StaticResource DgRowSelectedStyle}"
                         UserEditMode="None"
                         UserFilterMode="Disabled"
                         UserGroupMode="Disabled">
                         <telerik:RadDataGrid.Columns>
-                            <telerik:DataGridTextColumn HeaderText="Name"
-                                                        CellContentStyle="{StaticResource DgTextCellStyle}"
-                                                        HeaderStyle="{StaticResource DgHeaderCellStyle}"
-                                                        PropertyName="Name">
+                            <telerik:DataGridTextColumn
+                                CellContentStyle="{StaticResource DgTextCellStyle}"
+                                HeaderStyle="{StaticResource DgHeaderCellStyle}"
+                                HeaderText="Name"
+                                PropertyName="Name">
                                 <telerik:DataGridColumn.CellContentTemplate>
                                     <DataTemplate>
                                         <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Name}" />
@@ -104,10 +108,11 @@
                                 </telerik:DataGridColumn.CellContentTemplate>
                             </telerik:DataGridTextColumn>
 
-                            <telerik:DataGridTextColumn HeaderText="Age"
-                                                        PropertyName="Age"
-                                                        CellContentStyle="{StaticResource DgTextCellStyle}"
-                                                        HeaderStyle="{StaticResource DgHeaderCellStyle}">
+                            <telerik:DataGridTextColumn
+                                CellContentStyle="{StaticResource DgTextCellStyle}"
+                                HeaderStyle="{StaticResource DgHeaderCellStyle}"
+                                HeaderText="Age"
+                                PropertyName="Age">
                                 <telerik:DataGridColumn.CellContentTemplate>
                                     <DataTemplate>
                                         <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Age}" />
@@ -115,10 +120,11 @@
                                 </telerik:DataGridColumn.CellContentTemplate>
                             </telerik:DataGridTextColumn>
 
-                            <telerik:DataGridTextColumn HeaderText="Department"
-                                                        PropertyName="Department"
-                                                        CellContentStyle="{StaticResource DgTextCellStyle}"
-                                                        HeaderStyle="{StaticResource DgHeaderCellStyle}">
+                            <telerik:DataGridTextColumn
+                                CellContentStyle="{StaticResource DgTextCellStyle}"
+                                HeaderStyle="{StaticResource DgHeaderCellStyle}"
+                                HeaderText="Department"
+                                PropertyName="Department">
                                 <telerik:DataGridColumn.CellContentTemplate>
                                     <DataTemplate>
                                         <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Department}" />
@@ -143,33 +149,33 @@
                         WidthRequest="280" />
                     <telerik:RadDataGrid
                         x:Name="test3dg"
-                        CurrentCellStyle="{StaticResource DgCurrentCellStyle}"
-                        MouseHoverStyle="{StaticResource DgMouseHoverStyle}"
-                        SelectionStyle="{StaticResource DgRowSelectedStyle}"
                         AutoGenerateColumns="False"
+                        CurrentCellStyle="{StaticResource DgCurrentCellStyle}"
                         ItemsSource="{Binding Person3Collection}"
+                        MouseHoverStyle="{StaticResource DgMouseHoverStyle}"
                         SelectionMode="Single"
+                        SelectionStyle="{StaticResource DgRowSelectedStyle}"
                         UserEditMode="None"
                         UserFilterMode="Disabled"
                         UserGroupMode="Disabled">
                         <telerik:RadDataGrid.Columns>
-                            <telerik:DataGridTextColumn HeaderText="Name" 
-                                                        CellContentStyle="{StaticResource DgTextCellStyle}"
-                                                        HeaderStyle="{StaticResource DgHeaderCellStyle}"
-                                                        PropertyName="Name">
+                            <telerik:DataGridTextColumn
+                                CellContentStyle="{StaticResource DgTextCellStyle}"
+                                HeaderStyle="{StaticResource DgHeaderCellStyle}"
+                                HeaderText="Name"
+                                PropertyName="Name">
                                 <telerik:DataGridColumn.CellContentTemplate>
                                     <DataTemplate>
-                                        <telerik:RadHighlightLabel TextDecorations="Underline"
-                                                                   
-                                                                   UnformattedText="{Binding Name}" />
+                                        <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Name}" />
                                     </DataTemplate>
                                 </telerik:DataGridColumn.CellContentTemplate>
                             </telerik:DataGridTextColumn>
 
-                            <telerik:DataGridTextColumn HeaderText="Age" 
-                                                        CellContentStyle="{StaticResource DgTextCellStyle}"
-                                                        HeaderStyle="{StaticResource DgHeaderCellStyle}"
-                                                        PropertyName="Age">
+                            <telerik:DataGridTextColumn
+                                CellContentStyle="{StaticResource DgTextCellStyle}"
+                                HeaderStyle="{StaticResource DgHeaderCellStyle}"
+                                HeaderText="Age"
+                                PropertyName="Age">
                                 <telerik:DataGridColumn.CellContentTemplate>
                                     <DataTemplate>
                                         <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Age}" />
@@ -177,10 +183,11 @@
                                 </telerik:DataGridColumn.CellContentTemplate>
                             </telerik:DataGridTextColumn>
 
-                            <telerik:DataGridTextColumn HeaderText="Department"
-                                                        CellContentStyle="{StaticResource DgTextCellStyle}"
-                                                        HeaderStyle="{StaticResource DgHeaderCellStyle}"
-                                                        PropertyName="Department">
+                            <telerik:DataGridTextColumn
+                                CellContentStyle="{StaticResource DgTextCellStyle}"
+                                HeaderStyle="{StaticResource DgHeaderCellStyle}"
+                                HeaderText="Department"
+                                PropertyName="Department">
                                 <telerik:DataGridColumn.CellContentTemplate>
                                     <DataTemplate>
                                         <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Department}" />
@@ -205,20 +212,21 @@
                         WidthRequest="280" />
                     <telerik:RadDataGrid
                         x:Name="test4dg"
-                        CurrentCellStyle="{StaticResource DgCurrentCellStyle}"
-                        MouseHoverStyle="{StaticResource DgMouseHoverStyle}"
-                        SelectionStyle="{StaticResource DgRowSelectedStyle}"
                         AutoGenerateColumns="False"
+                        CurrentCellStyle="{StaticResource DgCurrentCellStyle}"
                         ItemsSource="{Binding Person4Collection}"
+                        MouseHoverStyle="{StaticResource DgMouseHoverStyle}"
                         SelectionMode="Single"
+                        SelectionStyle="{StaticResource DgRowSelectedStyle}"
                         UserEditMode="None"
                         UserFilterMode="Disabled"
                         UserGroupMode="Disabled">
                         <telerik:RadDataGrid.Columns>
-                            <telerik:DataGridTextColumn HeaderText="Name" 
-                                                        CellContentStyle="{StaticResource DgTextCellStyle}"
-                                                        HeaderStyle="{StaticResource DgHeaderCellStyle}"
-                                                        PropertyName="Name">
+                            <telerik:DataGridTextColumn
+                                CellContentStyle="{StaticResource DgTextCellStyle}"
+                                HeaderStyle="{StaticResource DgHeaderCellStyle}"
+                                HeaderText="Name"
+                                PropertyName="Name">
                                 <telerik:DataGridColumn.CellContentTemplate>
                                     <DataTemplate>
                                         <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Name}" />
@@ -226,10 +234,11 @@
                                 </telerik:DataGridColumn.CellContentTemplate>
                             </telerik:DataGridTextColumn>
 
-                            <telerik:DataGridTextColumn HeaderText="Age" 
-                                                        CellContentStyle="{StaticResource DgTextCellStyle}"
-                                                        HeaderStyle="{StaticResource DgHeaderCellStyle}"
-                                                        PropertyName="Age">
+                            <telerik:DataGridTextColumn
+                                CellContentStyle="{StaticResource DgTextCellStyle}"
+                                HeaderStyle="{StaticResource DgHeaderCellStyle}"
+                                HeaderText="Age"
+                                PropertyName="Age">
                                 <telerik:DataGridColumn.CellContentTemplate>
                                     <DataTemplate>
                                         <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Age}" />
@@ -237,10 +246,11 @@
                                 </telerik:DataGridColumn.CellContentTemplate>
                             </telerik:DataGridTextColumn>
 
-                            <telerik:DataGridTextColumn HeaderText="Department"
-                                                        CellContentStyle="{StaticResource DgTextCellStyle}"
-                                                        HeaderStyle="{StaticResource DgHeaderCellStyle}"
-                                                        PropertyName="Department">
+                            <telerik:DataGridTextColumn
+                                CellContentStyle="{StaticResource DgTextCellStyle}"
+                                HeaderStyle="{StaticResource DgHeaderCellStyle}"
+                                HeaderText="Department"
+                                PropertyName="Department">
                                 <telerik:DataGridColumn.CellContentTemplate>
                                     <DataTemplate>
                                         <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Department}" />
@@ -265,20 +275,21 @@
                         WidthRequest="280" />
                     <telerik:RadDataGrid
                         x:Name="test5dg"
-                        CurrentCellStyle="{StaticResource DgCurrentCellStyle}"
-                        MouseHoverStyle="{StaticResource DgMouseHoverStyle}"
-                        SelectionStyle="{StaticResource DgRowSelectedStyle}"
                         AutoGenerateColumns="False"
+                        CurrentCellStyle="{StaticResource DgCurrentCellStyle}"
                         ItemsSource="{Binding Person5Collection}"
+                        MouseHoverStyle="{StaticResource DgMouseHoverStyle}"
                         SelectionMode="Single"
+                        SelectionStyle="{StaticResource DgRowSelectedStyle}"
                         UserEditMode="None"
                         UserFilterMode="Disabled"
                         UserGroupMode="Disabled">
                         <telerik:RadDataGrid.Columns>
-                            <telerik:DataGridTextColumn HeaderText="Name" 
-                                                        CellContentStyle="{StaticResource DgTextCellStyle}"
-                                                        HeaderStyle="{StaticResource DgHeaderCellStyle}"
-                                                        PropertyName="Name">
+                            <telerik:DataGridTextColumn
+                                CellContentStyle="{StaticResource DgTextCellStyle}"
+                                HeaderStyle="{StaticResource DgHeaderCellStyle}"
+                                HeaderText="Name"
+                                PropertyName="Name">
                                 <telerik:DataGridColumn.CellContentTemplate>
                                     <DataTemplate>
                                         <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Name}" />
@@ -286,10 +297,11 @@
                                 </telerik:DataGridColumn.CellContentTemplate>
                             </telerik:DataGridTextColumn>
 
-                            <telerik:DataGridTextColumn HeaderText="Age" 
-                                                        CellContentStyle="{StaticResource DgTextCellStyle}"
-                                                        HeaderStyle="{StaticResource DgHeaderCellStyle}"
-                                                        PropertyName="Age">
+                            <telerik:DataGridTextColumn
+                                CellContentStyle="{StaticResource DgTextCellStyle}"
+                                HeaderStyle="{StaticResource DgHeaderCellStyle}"
+                                HeaderText="Age"
+                                PropertyName="Age">
                                 <telerik:DataGridColumn.CellContentTemplate>
                                     <DataTemplate>
                                         <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Age}" />
@@ -297,10 +309,11 @@
                                 </telerik:DataGridColumn.CellContentTemplate>
                             </telerik:DataGridTextColumn>
 
-                            <telerik:DataGridTextColumn HeaderText="Department"
-                                                        CellContentStyle="{StaticResource DgTextCellStyle}"
-                                                        HeaderStyle="{StaticResource DgHeaderCellStyle}"
-                                                        PropertyName="Department">
+                            <telerik:DataGridTextColumn
+                                CellContentStyle="{StaticResource DgTextCellStyle}"
+                                HeaderStyle="{StaticResource DgHeaderCellStyle}"
+                                HeaderText="Department"
+                                PropertyName="Department">
                                 <telerik:DataGridColumn.CellContentTemplate>
                                     <DataTemplate>
                                         <telerik:RadHighlightLabel TextDecorations="Underline" UnformattedText="{Binding Department}" />
