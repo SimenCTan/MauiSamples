@@ -22,6 +22,10 @@
             Title="ContentPresenter"
             ContentTemplate="{DataTemplate pages:ContentPresenterPage}"
             Route="Presenter" />
+        <ShellContent
+            Title="DataTemplate"
+            ContentTemplate="{DataTemplate pages:DataTemplatePage}"
+            Route="DataTemplatePage" />
     </FlyoutItem>
 
 </Shell>

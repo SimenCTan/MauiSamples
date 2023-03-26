@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="OfficeControlGallery.Pages.DataTemplatePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:OfficeControlGallery.Models"
+    Title="DataTemplatePage">
+    <VerticalStackLayout>
+        <CollectionView>
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type models:Person}">
+                    <models:Person
+                        Name="Steve"
+                        Age="21"
+                        Location="USA" />
+                    <models:Person
+                        Name="John"
+                        Age="37"
+                        Location="USA" />
+                    <models:Person
+                        Name="Tom"
+                        Age="42"
+                        Location="UK" />
+                    <models:Person
+                        Name="Lucas"
+                        Age="29"
+                        Location="Germany" />
+                    <models:Person
+                        Name="Tariq"
+                        Age="39"
+                        Location="UK" />
+                    <models:Person
+                        Name="Jane"
+                        Age="30"
+                        Location="USA" />
+                </x:Array>
+            </CollectionView.ItemsSource>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="0.5*,0.2*,0.3*">
+                        <Label Text="{Binding Name}" FontAttributes="Bold"/>
+                        <Label Text="{Binding Age}" Grid.Column="1"/>
+                        <Label Text="{Binding Location}" Grid.Column="2" HorizontalTextAlignment="End"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
