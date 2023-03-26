@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:OfficeControlGallery.Controls"
-             x:Class="OfficeControlGallery.Controls.TealControl">
+<ContentView
+    x:Class="OfficeControlGallery.Controls.TealControl"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:OfficeControlGallery.Controls">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.1*" />
@@ -10,32 +11,34 @@
             <RowDefinition Height="0.1*" />
         </Grid.RowDefinitions>
         <BoxView Color="Teal" />
-        <Label Margin="20,0,0,0"
-               x:Name="headerLabel"
-               Text="{TemplateBinding HeaderText}"
-               TextColor="White"
-               FontSize="24"
-               VerticalOptions="Center" />
+        <Label
+            x:Name="headerLabel"
+            Margin="20,0,0,0"
+            FontSize="24"
+            Text="{TemplateBinding HeaderText}"
+            TextColor="White"
+            VerticalOptions="Center" />
         <ContentPresenter Grid.Row="1" />
-        <BoxView Grid.Row="2"
-                 Color="Teal" />
-        <Label x:Name="changeThemeLabel"
-               Grid.Row="2"
-               Margin="20,0,0,0"
-               Text="Change Theme"
-               TextColor="White"
-               HorizontalOptions="Start"
-               VerticalOptions="Center">
+        <BoxView Grid.Row="2" Color="Teal" />
+        <Label
+            x:Name="changeThemeLabel"
+            Grid.Row="2"
+            Margin="20,0,0,0"
+            HorizontalOptions="Start"
+            Text="Change Theme"
+            TextColor="White"
+            VerticalOptions="Center">
             <Label.GestureRecognizers>
                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
             </Label.GestureRecognizers>
         </Label>
-        <controls:HyperlinkLabel Grid.Row="2"
-                                 Margin="0,0,20,0"
-                                 Text="Help"
-                                 TextColor="White"
-                                 Url="https://learn.microsoft.com/dotnet/maui/"
-                                 HorizontalOptions="End"
-                                 VerticalOptions="Center" />
+        <controls:HyperlinkLabel
+            Grid.Row="2"
+            Margin="0,0,20,0"
+            HorizontalOptions="End"
+            Text="Help"
+            TextColor="White"
+            Url="https://learn.microsoft.com/dotnet/maui/"
+            VerticalOptions="Center" />
     </Grid>
 </ContentView>

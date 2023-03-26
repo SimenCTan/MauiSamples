@@ -4,9 +4,15 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:models="clr-namespace:OfficeControlGallery.Models"
+    xmlns:datatemplates="clr-namespace:OfficeControlGallery.DataTemplates"
     Title="DataTemplatePage">
+    <ContentPage.Resources>
+        <DataTemplate x:Key="personviewdt">
+            <datatemplates:PersonView/>
+        </DataTemplate>
+    </ContentPage.Resources>
     <VerticalStackLayout>
-        <CollectionView>
+        <CollectionView ItemTemplate="{StaticResource personviewdt}">
             <CollectionView.ItemsSource>
                 <x:Array Type="{x:Type models:Person}">
                     <models:Person
@@ -35,15 +41,6 @@
                         Location="USA" />
                 </x:Array>
             </CollectionView.ItemsSource>
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Grid ColumnDefinitions="0.5*,0.2*,0.3*">
-                        <Label Text="{Binding Name}" FontAttributes="Bold"/>
-                        <Label Text="{Binding Age}" Grid.Column="1"/>
-                        <Label Text="{Binding Location}" Grid.Column="2" HorizontalTextAlignment="End"/>
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
         </CollectionView>
     </VerticalStackLayout>
 </ContentPage>

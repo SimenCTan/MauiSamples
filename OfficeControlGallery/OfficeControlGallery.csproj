@@ -67,6 +67,9 @@
 	  <MauiXaml Update="Controls\TealControl.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="DataTemplates\PersonView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\ContentPresenterPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
