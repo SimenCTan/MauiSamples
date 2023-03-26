@@ -5,13 +5,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:OfficeControlGallery"
     xmlns:pages="clr-namespace:OfficeControlGallery.Pages"
-    Shell.FlyoutBehavior="Disabled">
+    Shell.FlyoutBehavior="Flyout">
 
-    <ShellContent
-            Title="Card"
-            ContentTemplate="{DataTemplate pages:ControlTemplatePage}"
-            Route="Card" />
-    <!--<FlyoutItem Title="Home" >
+    <FlyoutItem Title="Home" >
         <ShellContent
             Title="Main"
             ContentTemplate="{DataTemplate local:MainPage}"
@@ -22,6 +18,6 @@
             Title="Card"
             ContentTemplate="{DataTemplate pages:ControlTemplatePage}"
             Route="Card" />
-    </FlyoutItem>-->
+    </FlyoutItem>
 
 </Shell>
