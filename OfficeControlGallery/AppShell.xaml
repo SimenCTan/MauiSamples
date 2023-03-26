@@ -7,7 +7,7 @@
     xmlns:pages="clr-namespace:OfficeControlGallery.Pages"
     Shell.FlyoutBehavior="Flyout">
 
-    <FlyoutItem Title="Home" >
+    <FlyoutItem Title="Home">
         <ShellContent
             Title="Main"
             ContentTemplate="{DataTemplate local:MainPage}"
@@ -18,6 +18,10 @@
             Title="Card"
             ContentTemplate="{DataTemplate pages:ControlTemplatePage}"
             Route="Card" />
+        <ShellContent
+            Title="ContentPresenter"
+            ContentTemplate="{DataTemplate pages:ContentPresenterPage}"
+            Route="Presenter" />
     </FlyoutItem>
 
 </Shell>

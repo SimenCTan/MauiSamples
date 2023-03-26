@@ -64,6 +64,12 @@
 	  <MauiXaml Update="Controls\CardControl.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Controls\TealControl.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\ContentPresenterPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\ControlTemplatePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
