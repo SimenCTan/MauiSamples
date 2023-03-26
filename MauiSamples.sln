@@ -10,7 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikExpander", "TelerikExpander\TelerikExpander.csproj", "{6C24ED8B-3903-4215-A78D-4BFFB53078EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelerikExpander", "TelerikExpander\TelerikExpander.csproj", "{6C24ED8B-3903-4215-A78D-4BFFB53078EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeControlGallery", "OfficeControlGallery\OfficeControlGallery.csproj", "{8665BC68-B024-4955-9629-29D7B6E3755F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,8 +26,17 @@ Global
 		{6C24ED8B-3903-4215-A78D-4BFFB53078EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C24ED8B-3903-4215-A78D-4BFFB53078EE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6C24ED8B-3903-4215-A78D-4BFFB53078EE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8665BC68-B024-4955-9629-29D7B6E3755F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8665BC68-B024-4955-9629-29D7B6E3755F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8665BC68-B024-4955-9629-29D7B6E3755F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8665BC68-B024-4955-9629-29D7B6E3755F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8665BC68-B024-4955-9629-29D7B6E3755F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8665BC68-B024-4955-9629-29D7B6E3755F}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3BCA75F-BD74-4422-B22E-2E1118C5F045}
 	EndGlobalSection
 EndGlobal
