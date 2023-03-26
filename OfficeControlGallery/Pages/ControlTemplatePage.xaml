@@ -55,18 +55,18 @@
                 </Grid>
             </Frame>
         </ControlTemplate>
-        <Style TargetType="controls:CardControl">
+        <!--<Style TargetType="controls:CardControl">
             <Setter Property="ControlTemplate" Value="{StaticResource CardViewControlTemplate}"/>
-        </Style>
+        </Style>-->
     </ContentPage.Resources>
     <StackLayout Margin="30">
         <controls:CardControl BorderColor="DarkGray" 
-                              CardTitle="John Doe"
+                              CardTitle="Doe"
                               CardDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum."
                               IconBackgroundColor="SlateGray"
                               IconImageSource="test.png"/>
         <controls:CardControl BorderColor="DarkGray" 
-                              CardTitle="John Doe"
+                              CardTitle="Doe"
                               CardDescription="Phasellus eu convallis mi. In tempus augue eu dignissim fermentum. Morbi ut lacus vitae eros lacinia."
                               IconBackgroundColor="SlateGray"
                               IconImageSource="test.png"/>

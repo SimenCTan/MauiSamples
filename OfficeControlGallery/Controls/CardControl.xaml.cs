@@ -1,6 +1,6 @@
 namespace OfficeControlGallery.Controls;
 
-public class CardControl : ContentView
+public partial class CardControl : ContentView
 {
     public static readonly BindableProperty CardTitleProperty = BindableProperty.Create(nameof(CardTitle), typeof(string), typeof(CardControl), string.Empty);
 
@@ -41,4 +41,8 @@ public class CardControl : ContentView
         get => (string)GetValue(IconImageSourceProperty);
         set => SetValue(CardTitleProperty, value);
     }
+    public CardControl()
+	{
+		InitializeComponent();
+	}
 }

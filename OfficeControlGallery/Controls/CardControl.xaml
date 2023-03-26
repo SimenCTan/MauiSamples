@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="OfficeControlGallery.Controls.CardControl"
+    x:Name="this"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Frame
+        Padding="8"
+        BindingContext="{x:Reference this}"
+        BackgroundColor="{Binding CardColor}"
+        BorderColor="{Binding BorderColor}"
+        CornerRadius="5"
+        HasShadow="True"
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+        <Grid ColumnDefinitions="75,200" RowDefinitions="75,4,auto">
+            <Frame
+                BackgroundColor="{Binding IconBackgroundColor}"
+                BorderColor="{Binding BorderColor}"
+                CornerRadius="38"
+                HeightRequest="60"
+                HorizontalOptions="Center"
+                IsClippedToBounds="True"
+                VerticalOptions="Center"
+                WidthRequest="60">
+                <Image
+                    Margin="-60"
+                    Aspect="AspectFill"
+                    HeightRequest="100"
+                    Source="{Binding IconImageSource}"
+                    WidthRequest="100" />
+            </Frame>
+            <Label
+                Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="18"
+                HorizontalTextAlignment="Start"
+                Text="{Binding CardTitle}"
+                VerticalTextAlignment="Center" />
+            <BoxView
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                BackgroundColor="{Binding BorderColor}"
+                HeightRequest="2"
+                HorizontalOptions="Fill" />
+            <Label
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="Fill"
+                Text="{Binding CardDescription}"
+                VerticalOptions="Fill"
+                VerticalTextAlignment="Start" />
+        </Grid>
+    </Frame>
+</ContentView>
