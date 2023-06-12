@@ -34,5 +34,9 @@
             ContentTemplate="{DataTemplate pages:DataTemplateSelectorPage}"
             Route="DTSelector" />
     </FlyoutItem>
+    <FlyoutItem Title="WebView">
+        <ShellContent Title="Jobs" ContentTemplate="{DataTemplate pages:WebViewPage}"
+                      Route="webview"/>
+    </FlyoutItem>
 
 </Shell>

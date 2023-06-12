@@ -7,7 +7,7 @@
     Title="ControlTemplatePage">
     <ContentPage.Resources>
         <DataTemplate x:Key="CardViewDataTemplate">
-            <controls:CardControl/>
+            <controls:CardControl />
         </DataTemplate>
         <ControlTemplate x:Key="CardViewControlTemplate">
             <Frame
@@ -63,15 +63,17 @@
         </Style>-->
     </ContentPage.Resources>
     <StackLayout Margin="30">
-        <controls:CardControl BorderColor="DarkGray" 
-                              CardTitle="Doe"
-                              CardDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum."
-                              IconBackgroundColor="SlateGray"
-                              IconImageSource="test.png"/>
-        <controls:CardControl BorderColor="DarkGray" 
-                              CardTitle="Doe"
-                              CardDescription="Phasellus eu convallis mi. In tempus augue eu dignissim fermentum. Morbi ut lacus vitae eros lacinia."
-                              IconBackgroundColor="SlateGray"
-                              IconImageSource="test.png"/>
+        <controls:CardControl
+            BorderColor="DarkGray"
+            CardDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum."
+            CardTitle="Doe"
+            IconBackgroundColor="SlateGray"
+            IconImageSource="test.png" />
+        <controls:CardControl
+            BorderColor="DarkGray"
+            CardDescription="Phasellus eu convallis mi. In tempus augue eu dignissim fermentum. Morbi ut lacus vitae eros lacinia."
+            CardTitle="Doe"
+            IconBackgroundColor="SlateGray"
+            IconImageSource="test.png" />
     </StackLayout>
 </ContentPage>
