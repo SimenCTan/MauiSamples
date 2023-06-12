@@ -22,7 +22,7 @@
             Title="ContentPresenter"
             ContentTemplate="{DataTemplate pages:ContentPresenterPage}"
             Route="Presenter" />
-        
+
     </FlyoutItem>
     <FlyoutItem Title="DataTemplate">
         <ShellContent
@@ -35,8 +35,10 @@
             Route="DTSelector" />
     </FlyoutItem>
     <FlyoutItem Title="WebView">
-        <ShellContent Title="Jobs" ContentTemplate="{DataTemplate pages:WebViewPage}"
-                      Route="webview"/>
+        <ShellContent
+            Title="Jobs"
+            ContentTemplate="{DataTemplate pages:WebViewPage}"
+            Route="webview" />
     </FlyoutItem>
 
 </Shell>
