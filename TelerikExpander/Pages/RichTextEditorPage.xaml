@@ -11,9 +11,10 @@
             Grid.Column="1"
             Background="{StaticResource BlackBrush}"
             CornerRadius="10">
-            <telerik:RadRichTextEditor Background="{StaticResource Gray300}" 
-                                       BackgroundColor="{StaticResource Gray100}"
-                                       CornerRadius="10" />
+            <telerik:RadRichTextEditor
+                Background="{StaticResource Gray300}"
+                BackgroundColor="{StaticResource Gray100}"
+                CornerRadius="10" />
         </telerik:RadBorder>
     </Grid>
 </ContentPage>
