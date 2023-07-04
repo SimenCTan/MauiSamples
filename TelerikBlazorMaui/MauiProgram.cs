@@ -15,6 +15,7 @@ namespace TelerikBlazorMaui
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
             builder.Services.AddMauiBlazorWebView();
+            builder.Services.AddTelerikBlazor();
 
 #if DEBUG
             builder.Logging.AddDebug();
