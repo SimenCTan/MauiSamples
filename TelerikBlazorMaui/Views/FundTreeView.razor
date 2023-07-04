@@ -1,0 +1,146 @@
+﻿@using Telerik.SvgIcons;
+@*@inherits LayoutComponentBase*@
+
+<TelerikRootComponent>
+<TelerikTreeView Draggable=true Data="@FlatData"
+                @bind-ExpandedItems="@ExpandedfundItems"
+                OnDrop="@OnItemDrop">
+    <TreeViewBindings>
+        <TreeViewBinding ParentIdField="ParentIdValue"></TreeViewBinding>
+    </TreeViewBindings>
+</TelerikTreeView>
+<TelerikWindow @bind-Visible="@WarningWindowVisible" Modal=true>
+    <WindowActions>
+        <WindowAction Name="Close"></WindowAction>
+    </WindowActions>
+    <WindowTitle>
+        Warning
+    </WindowTitle>
+    <WindowContent>
+        Drop over a child node is not supported!
+    </WindowContent>
+</TelerikWindow>
+</TelerikRootComponent>
+
+@code {
+    public List<FundItem> FlatData { get; set; }
+    public IEnumerable<object> ExpandedfundItems { get; set; }
+    public bool WarningWindowVisible { get; set; }
+    protected override void OnInitialized()
+    {
+        LoadFlatData();
+        base.OnInitialized();
+    }
+
+    private void LoadFlatData()
+    {
+        List<FundItem> fundItems = new();
+        fundItems.Add(new FundItem
+            {
+                Id = 1,
+                Text = "Project",
+                HasChildren = true,
+                Icon = SvgIcon.File
+            });
+        fundItems.Add(new FundItem()
+            {
+                Id = 2,
+                Text = "Design",
+                ParentIdValue = 1,
+                HasChildren = true,
+                Icon = SvgIcon.Brush
+            });
+        fundItems.Add(new FundItem()
+            {
+                Id = 3,
+                Text = "Implementation",
+                ParentIdValue = 1,
+                HasChildren = true,
+                Icon = SvgIcon.Folder
+            });
+
+        fundItems.Add(new FundItem()
+            {
+                Id = 4,
+                Text = "site.psd",
+                ParentIdValue = 2,
+                HasChildren = false,
+                Icon = SvgIcon.FilePsd
+            });
+
+        fundItems.Add(new FundItem()
+            {
+                Id = 5,
+                Text = "index.js",
+                ParentIdValue = 3,
+                HasChildren = false,
+                Icon = SvgIcon.Js
+            });
+        fundItems.Add(new FundItem()
+            {
+                Id = 6,
+                Text = "index.html",
+                ParentIdValue = 3,
+                HasChildren = false,
+                Icon = SvgIcon.Code
+            });
+
+        fundItems.Add(new FundItem()
+            {
+                Id = 7,
+                Text = "styles.css",
+                ParentIdValue = 3,
+                HasChildren = false,
+                Icon = SvgIcon.Css
+            });
+        FlatData = fundItems;
+        ExpandedfundItems = fundItems;
+    }
+
+    public void OnItemDrop(TreeViewDropEventArgs dropEventArgs)
+    {
+        var fundItem = dropEventArgs.Item as FundItem;
+        var destinationItem = dropEventArgs.DestinationItem as FundItem;
+        if (destinationItem != null && IsChild(fundItem, destinationItem))
+        {
+            WarningWindowVisible = true;
+            return;
+        }
+        FlatData.Remove(fundItem);
+        if (fundItem.ParentIdValue.HasValue && 
+            !FlatData.Any(m => m.ParentIdValue == fundItem.ParentIdValue))
+        {
+            FlatData.FirstOrDefault(x => x.Id == fundItem.ParentIdValue).HasChildren = false;
+        }
+        if (dropEventArgs.DropPosition == TreeViewDropPosition.Over)
+        {
+            fundItem.ParentIdValue = destinationItem.Id;
+            destinationItem.HasChildren = true;
+            FlatData.Add(fundItem);
+        }
+        else
+        {
+            var index = FlatData.IndexOf(destinationItem);
+            fundItem.ParentIdValue = destinationItem.ParentIdValue;
+            if (dropEventArgs.DropPosition == TreeViewDropPosition.After)
+            {
+                index++;    
+            }
+            FlatData.Insert(index, fundItem);
+        }
+        FlatData = new List<FundItem>(FlatData);
+    }
+    private bool IsChild(FundItem sourceItem, FundItem desItem)
+    {
+        if (!desItem.ParentIdValue.HasValue || sourceItem is null)
+        {
+            return false;
+        }
+        else if (desItem.ParentIdValue?.Equals(sourceItem.Id) == true)
+        {
+            return true;    
+        }
+        var parentDesItem = FlatData.FirstOrDefault(e => e.Id.Equals(desItem.ParentIdValue));
+        return IsChild(sourceItem, parentDesItem);
+    }
+}

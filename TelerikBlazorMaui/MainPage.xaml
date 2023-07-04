@@ -3,7 +3,8 @@
     x:Class="TelerikBlazorMaui.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:components="clr-namespace:TelerikBlazorMaui.Components">
+    xmlns:components="clr-namespace:TelerikBlazorMaui.Components"
+    xmlns:views="clr-namespace:TelerikBlazorMaui.Views">
 
     <Grid RowDefinitions="*,*">
         <ScrollView>
@@ -45,7 +46,7 @@
             Grid.Row="1"
             HostPage="wwwroot/index.html">
             <BlazorWebView.RootComponents>
-                <RootComponent ComponentType="{x:Type components:Count}" Selector="#app" />
+                <RootComponent ComponentType="{x:Type views:FundTreeView}" Selector="#app" />
             </BlazorWebView.RootComponents>
         </BlazorWebView>
     </Grid>
