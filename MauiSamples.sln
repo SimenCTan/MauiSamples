@@ -14,9 +14,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelerikExpander", "TelerikE
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeControlGallery", "OfficeControlGallery\OfficeControlGallery.csproj", "{8665BC68-B024-4955-9629-29D7B6E3755F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikBlazorMaui", "TelerikBlazorMaui\TelerikBlazorMaui.csproj", "{A6C730CC-4ACA-4EEF-BDE0-3FB97E6C6445}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelerikBlazorMaui", "TelerikBlazorMaui\TelerikBlazorMaui.csproj", "{A6C730CC-4ACA-4EEF-BDE0-3FB97E6C6445}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorHybrid", "BlazorHybrid\BlazorHybrid.csproj", "{6EFA1B29-6756-41CE-B40D-2B49702FF2B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorHybrid", "BlazorHybrid\BlazorHybrid.csproj", "{6EFA1B29-6756-41CE-B40D-2B49702FF2B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
