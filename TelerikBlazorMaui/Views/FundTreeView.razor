@@ -2,24 +2,24 @@
 @*@inherits LayoutComponentBase*@
 
 <TelerikRootComponent>
-<TelerikTreeView Draggable=true Data="@FlatData"
-                @bind-ExpandedItems="@ExpandedfundItems"
-                OnDrop="@OnItemDrop">
-    <TreeViewBindings>
-        <TreeViewBinding ParentIdField="ParentIdValue"></TreeViewBinding>
-    </TreeViewBindings>
-</TelerikTreeView>
-<TelerikWindow @bind-Visible="@WarningWindowVisible" Modal=true>
-    <WindowActions>
-        <WindowAction Name="Close"></WindowAction>
-    </WindowActions>
-    <WindowTitle>
-        Warning
-    </WindowTitle>
-    <WindowContent>
-        Drop over a child node is not supported!
-    </WindowContent>
-</TelerikWindow>
+    <TelerikTreeView Draggable=true Data="@FlatData"
+                    @bind-ExpandedItems="@ExpandedfundItems"
+                    OnDrop="@OnItemDrop">
+        <TreeViewBindings>
+            <TreeViewBinding ParentIdField="ParentIdValue"></TreeViewBinding>
+        </TreeViewBindings>
+    </TelerikTreeView>
+    <TelerikWindow @bind-Visible="@WarningWindowVisible" Modal=true>
+        <WindowActions>
+            <WindowAction Name="Close"></WindowAction>
+        </WindowActions>
+        <WindowTitle>
+            Warning
+        </WindowTitle>
+        <WindowContent>
+            Drop over a child node is not supported!
+        </WindowContent>
+    </TelerikWindow>
 </TelerikRootComponent>
 
 @code {

@@ -44,9 +44,10 @@
         <BlazorWebView
             x:Name="blazorWebView"
             Grid.Row="1"
+            BackgroundColor="AliceBlue"
             HostPage="wwwroot/index.html">
             <BlazorWebView.RootComponents>
-                <RootComponent ComponentType="{x:Type views:FundTreeView}" Selector="#app" />
+                <RootComponent ComponentType="{x:Type views:TextAreaView}" Selector="#app" />
             </BlazorWebView.RootComponents>
         </BlazorWebView>
     </Grid>
