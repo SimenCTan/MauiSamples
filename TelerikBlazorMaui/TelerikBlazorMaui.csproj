@@ -67,6 +67,9 @@
       <MauiXaml Update="Pages\FlatTreeViewPage.xaml">
         <Generator>MSBuild:Compile</Generator>
       </MauiXaml>
+      <MauiXaml Update="Pages\FormatTreeNodePage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </MauiXaml>
       <MauiXaml Update="Pages\TemplateTreeViewPage.xaml">
         <Generator>MSBuild:Compile</Generator>
       </MauiXaml>
