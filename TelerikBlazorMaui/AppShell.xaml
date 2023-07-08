@@ -4,11 +4,19 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:TelerikBlazorMaui"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:pages="clr-namespace:TelerikBlazorMaui.Pages"
+    Shell.FlyoutBehavior="Locked">
 
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
-
+    <ShellContent
+        Title="TemplateTreeView"
+        ContentTemplate="{DataTemplate pages:TemplateTreeViewPage}"
+        Route="Template" />
+    <ShellContent
+        Title="FlatTreeView"
+        ContentTemplate="{DataTemplate pages:FlatTreeViewPage}"
+        Route="FlatTree" />
 </Shell>

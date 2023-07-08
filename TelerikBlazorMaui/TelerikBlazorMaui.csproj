@@ -57,4 +57,19 @@
         <None Include="wwwroot\index.html" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Update="Pages\TemplateTreeViewPage.xaml.cs">
+        <DependentUpon>TemplateTreeViewPage.xaml</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <MauiXaml Update="Pages\FlatTreeViewPage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </MauiXaml>
+      <MauiXaml Update="Pages\TemplateTreeViewPage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </MauiXaml>
+    </ItemGroup>
+
 </Project>
