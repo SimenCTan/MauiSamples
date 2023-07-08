@@ -19,7 +19,10 @@
         Title="FlatTreeView"
         ContentTemplate="{DataTemplate pages:FlatTreeViewPage}"
         Route="FlatTree" />
-    <ShellContent Title="Format"
+    <ShellContent Title="FormatTreeView"
                   ContentTemplate="{DataTemplate pages:FormatTreeNodePage}"
                   Route="FormatTree"/>
+    <ShellContent Title="Treelist"
+                  ContentTemplate="{DataTemplate pages:TreeListViewPage}"
+                  Route="Treelist"/>
 </Shell>
