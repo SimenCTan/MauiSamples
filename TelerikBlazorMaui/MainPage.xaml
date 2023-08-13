@@ -46,6 +46,12 @@
             Grid.Row="1"
             BackgroundColor="AliceBlue"
             HostPage="wwwroot/index.html">
+            <FlyoutBase.ContextFlyout>
+                <MenuFlyout>
+                    <MenuFlyoutItem Text="New"/>
+                    <MenuFlyoutItem Text="Clone"/>
+                </MenuFlyout>
+            </FlyoutBase.ContextFlyout>
             <BlazorWebView.RootComponents>
                 <RootComponent ComponentType="{x:Type views:TextAreaView}" Selector="#app" />
             </BlazorWebView.RootComponents>
