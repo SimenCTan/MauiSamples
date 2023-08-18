@@ -35,9 +35,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
-		<PackageReference Include="Telerik.UI.for.Maui" Version="5.2.0" />
+		<PackageReference Include="Telerik.UI.for.Maui" Version="6.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>

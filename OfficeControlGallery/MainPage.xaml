@@ -2,54 +2,12 @@
 <ContentPage
     x:Class="OfficeControlGallery.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:charts="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25"
-            VerticalOptions="Center">
-
-            <ContentView
-                Margin="-2"
-                Padding="10"
-                HeightRequest="120"
-                HorizontalOptions="FillAndExpand">
-                <ContentView.Background>
-                    <LinearGradientBrush>
-                        <GradientStop Offset="0.1" Color="Green" />
-                        <GradientStop Offset="1" Color="Red" />
-                    </LinearGradientBrush>
-                </ContentView.Background>
-
-            </ContentView>
-            <Image
-                HeightRequest="200"
-                HorizontalOptions="Center"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                Source="dotnet_bot.png" />
-
-            <Label
-                FontSize="32"
-                HorizontalOptions="Center"
-                SemanticProperties.HeadingLevel="Level1"
-                Text="Hello, World!" />
-
-            <Label
-                FontSize="18"
-                HorizontalOptions="Center"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                SemanticProperties.HeadingLevel="Level2"
-                Text="Welcome to .NET Multi-platform App UI" />
-
-            <Button
-                x:Name="CounterBtn"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Text="Click me" />
-
-        </VerticalStackLayout>
-    </ScrollView>
+    <VerticalStackLayout Spacing="5">
+        <charts:ChartView x:Name="chartView1" HeightRequest="200" WidthRequest="400"/>
+        <charts:ChartView x:Name="chartView2" HeightRequest="200" WidthRequest="400"/>
+    </VerticalStackLayout>
 
 </ContentPage>
