@@ -1,6 +1,6 @@
 ﻿<TelerikTreeList Data="@Data"
-                  ItemsField="Items"
-                  Pageable=true>
+    Height="500"
+                  ItemsField="Items">
 <TreeListColumns>
     <TreeListColumn Field="Id" Width="60px"/>
     <TreeListColumn Field="Name" Expandable=true Width="200px"/>
@@ -9,6 +9,21 @@
     <TreeListColumn Field="HireDate"></TreeListColumn>
 </TreeListColumns>        
 </TelerikTreeList>
+
+<style>
+    /* set dimensions and enable scrollability */
+    .scrollable-parent {
+        width: 100%;
+        height: 600px;
+        overflow: auto;
+    }
+
+        /* allow the TreeView AND its content to overflow and trigger scrolling */
+        .scrollable-parent .k-treelist,
+        .scrollable-parent .k-animation-container {
+            overflow: visible;
+        }
+</style>
 
 @code {
     public class TreeListHierarchicalItem

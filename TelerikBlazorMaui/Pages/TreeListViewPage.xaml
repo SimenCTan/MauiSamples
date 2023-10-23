@@ -12,4 +12,4 @@
             </BlazorWebView.RootComponents>
         </BlazorWebView>
     </Grid>
-</ContentPage>
+</ContentPage>    
