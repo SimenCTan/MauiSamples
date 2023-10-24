@@ -7,6 +7,9 @@
     xmlns:pages="clr-namespace:TelerikBlazorMaui.Pages"
     Shell.FlyoutBehavior="Locked">
 
+    <ShellContent Title="Treelist"
+              ContentTemplate="{DataTemplate pages:TreeListViewPage}"
+              Route="Treelist"/>
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
@@ -22,7 +25,4 @@
     <ShellContent Title="FormatTreeView"
                   ContentTemplate="{DataTemplate pages:FormatTreeNodePage}"
                   Route="FormatTree"/>
-    <ShellContent Title="Treelist"
-                  ContentTemplate="{DataTemplate pages:TreeListViewPage}"
-                  Route="Treelist"/>
 </Shell>

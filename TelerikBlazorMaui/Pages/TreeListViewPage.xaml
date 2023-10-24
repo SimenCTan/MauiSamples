@@ -4,7 +4,8 @@
              xmlns:views="clr-namespace:TelerikBlazorMaui.Views"
              x:Class="TelerikBlazorMaui.Pages.TreeListViewPage"
              Title="TreeListViewPage">
-    <Grid>
+    <Grid Background="{StaticResource BlackBrush}"
+          BackgroundColor="{StaticResource Black}">
         <BlazorWebView
             HostPage="wwwroot/index.html">
             <BlazorWebView.RootComponents>

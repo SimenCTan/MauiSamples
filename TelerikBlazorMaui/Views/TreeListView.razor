@@ -11,18 +11,68 @@
 </TelerikTreeList>
 
 <style>
-    /* set dimensions and enable scrollability */
-    .scrollable-parent {
-        width: 100%;
-        height: 600px;
-        overflow: auto;
+    .k-grid-header .k-table-th.k-grid-header-sticky,
+    .k-grid-header td.k-grid-header-sticky,
+    .k-grid-header .k-table-td.k-grid-header-sticky,
+    .k-grid-header .k-grid-header-sticky.k-sorted {
+        color: #EBEBEB;
+        background-color: #1F1D2B;
+        border-right-color: rgba(0, 0, 0, 0.3);
+        border-left-color: rgba(0, 0, 0, 0.3);
     }
 
-        /* allow the TreeView AND its content to overflow and trigger scrolling */
-        .scrollable-parent .k-treelist,
-        .scrollable-parent .k-animation-container {
-            overflow: visible;
-        }
+    .k-master-row .k-grid-content-sticky {
+        border-color: rgba(0, 0, 0, 0.3);
+        border-top-color: #5E5E5E;
+        background-color: #1F1D2B;
+    }
+
+    .k-master-row.k-table-alt-row .k-grid-content-sticky,
+    .k-master-row.k-table-alt-row .k-grid-row-sticky {
+        background-color: #1F1D2B;
+    }
+
+    .k-grid .k-grid-content-locked .k-selected td,
+    .k-grid .k-grid-content-locked .k-selected .k-table-td {
+        background-color: #532f2d;
+    }
+
+    .k-grid .k-grid-content-locked .k-selected.k-table-alt-row td,
+    .k-grid .k-grid-content-locked .k-selected.k-table-alt-row .k-table-td {
+        background-color: #532f2d;
+    }
+
+    .k-grid .k-grid-content-locked .k-selected:hover td,
+    .k-grid .k-grid-content-locked .k-selected.k-hover td,
+    .k-grid .k-grid-content-locked .k-selected:hover .k-table-td,
+    .k-grid .k-grid-content-locked .k-selected.k-hover .k-table-td {
+        background-color: #532f2d;
+    }
+
+    .k-master-row.k-table-row.k-selected td.k-grid-content-sticky,
+    .k-master-row.k-table-row.k-selected .k-table-td.k-grid-row-sticky,
+    .k-master-row.k-table-row td.k-grid-content-sticky.k-selected,
+    .k-master-row.k-table-row .k-table-td.k-grid-content-sticky.k-selected {
+        background-color: #532f2d;
+    }
+
+    .k-master-row.k-selected.k-table-alt-row td.k-grid-content-sticky,
+    .k-master-row.k-selected.k-table-alt-row .k-table-td.k-grid-row-sticky,
+    .k-master-row.k-table-alt-row td.k-grid-content-sticky.k-selected,
+    .k-master-row.k-table-alt-row .k-table-td.k-grid-content-sticky.k-selected {
+        background-color: #532f2d;
+    }
+
+    .k-master-row.k-selected:hover td.k-grid-content-sticky,
+    .k-master-row.k-selected:hover .k-table-td.k-grid-row-sticky,
+    .k-master-row.k-selected.k-hover td.k-grid-content-sticky,
+    .k-master-row.k-selected.k-hover .k-table-td.k-grid-row-sticky,
+    .k-master-row:hover td.k-grid-content-sticky.k-selected,
+    .k-master-row.k-hover td.k-grid-content-sticky.k-selected,
+    .k-master-row:hover .k-table-td.k-grid-content-sticky.k-selected,
+    .k-master-row.k-hover .k-table-td.k-grid-content-sticky.k-selected {
+        background-color: #532f2d;
+    }
 </style>
 
 @code {
