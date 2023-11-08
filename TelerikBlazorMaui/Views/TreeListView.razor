@@ -1,16 +1,52 @@
 ﻿<TelerikTreeList Data="@Data"
-    Height="500"
-                  ItemsField="Items">
-<TreeListColumns>
-    <TreeListColumn Field="Id" Width="60px"/>
-    <TreeListColumn Field="Name" Expandable=true Width="200px"/>
-    <TreeListColumn Field="AgeInYears"/>
-    <TreeListColumn Field="GraduateGrade"></TreeListColumn>
-    <TreeListColumn Field="HireDate"></TreeListColumn>
-</TreeListColumns>        
+                 Height="500"
+                 ItemsField="Items">
+    <TreeListColumns>
+        <TreeListColumn Field="Id" Width="60px" OnCellRender="@OnCellBorderRender" HeaderClass="center-me" Title="IdCenter" TextAlign="ColumnTextAlign.Center" />
+        <TreeListColumn Field="Name" Title="Name Center" HeaderClass="red-column-border" TextAlign="ColumnTextAlign.Center" Expandable=true Width="200px" />
+        <TreeListColumn Title="Column Group" HeaderClass="center-me red-column-border">
+            <Columns>
+                @GenerateBorderColumns()
+            </Columns>
+        </TreeListColumn>
+        <TreeListColumn Field="HireDate"></TreeListColumn>
+    </TreeListColumns>
 </TelerikTreeList>
 
 <style>
+
+    /* left header border */
+    .k-grid th.red-column-border,
+    /* right header border */
+    .k-grid th.red-column-border + th,
+    /* left data cell border */
+    .k-grid td.red-column-border,
+    /* right data cell border */
+    .k-grid td.red-column-border + td {
+        border-color: red;
+    }
+
+    /* The first column has no left border. */
+    /* Use if the target column is the first one. */
+
+    .k-grid.red-left-border > .k-grid-header,
+    .k-grid.red-left-border > .k-grid-container {
+        border-left: 1px solid red;
+    }
+
+
+    /* CENTER */
+
+    /* non-sortable headers */
+    .k-grid th.center-me {
+        text-align: center;
+    }
+
+    /* sortable headers */
+    th.center-me .k-cell-inner > .k-link {
+        justify-content: center;
+    }
+
     .k-grid-header .k-table-th.k-grid-header-sticky,
     .k-grid-header td.k-grid-header-sticky,
     .k-grid-header .k-table-td.k-grid-header-sticky,
@@ -76,6 +112,8 @@
 </style>
 
 @code {
+
+
     public class TreeListHierarchicalItem
     {
         public TreeListHierarchicalItem()
@@ -93,6 +131,26 @@
     }
 
     public List<TreeListHierarchicalItem> Data { get; set; }
+
+    private void OnCellBorderRender(TreeListCellRenderEventArgs args)
+    {
+        args.Class = "red-column-border";
+    }
+
+    RenderFragment GenerateBorderColumns()
+    {
+        RenderFragment dyColumns = builder =>
+        {
+            builder.OpenComponent<TreeListColumn>(0);
+            builder.AddAttribute(1, "Title", "AgeInYears");
+            builder.AddAttribute(2, "Field", "AgeInYears");
+            builder.AddAttribute(3, "Width", "80px");
+            builder.AddAttribute(4, "HeaderClass", "red-column-border");
+            //builder.AddAttribute(5, "OnCellRender", EventCallback.Factory.Create(builder, ()=>OnCellBorderRender(builder)));
+            builder.CloseComponent();
+        };
+        return dyColumns;
+    }
 
     protected override async Task OnInitializedAsync()
     {
