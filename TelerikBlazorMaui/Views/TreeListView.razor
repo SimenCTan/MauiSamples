@@ -1,15 +1,16 @@
 ﻿<TelerikTreeList Data="@Data"
-                 Height="500"
+                 Height="500px"
+                 Width="1000px"
                  ItemsField="Items">
     <TreeListColumns>
-        <TreeListColumn Field="Id" Width="60px" OnCellRender="@OnCellBorderRender" HeaderClass="center-me" Title="IdCenter" TextAlign="ColumnTextAlign.Center" />
-        <TreeListColumn Field="Name" Title="Name Center" HeaderClass="red-column-border" TextAlign="ColumnTextAlign.Center" Expandable=true Width="200px" />
+        <TreeListColumn Field="Id" Width="300px" OnCellRender="@OnCellBorderRender" HeaderClass="center-me" Title="IdCenter" TextAlign="ColumnTextAlign.Center" />
+        <TreeListColumn Field="Name" Width="300px" Title="Name Center" HeaderClass="red-column-border" TextAlign="ColumnTextAlign.Center" Expandable=true />
         <TreeListColumn Title="Column Group" HeaderClass="center-me red-column-border">
             <Columns>
                 @GenerateBorderColumns()
             </Columns>
         </TreeListColumn>
-        <TreeListColumn Field="HireDate"></TreeListColumn>
+        <TreeListColumn Width="300px" Field="HireDate"></TreeListColumn>
     </TreeListColumns>
 </TelerikTreeList>
 
@@ -144,7 +145,7 @@
             builder.OpenComponent<TreeListColumn>(0);
             builder.AddAttribute(1, "Title", "AgeInYears");
             builder.AddAttribute(2, "Field", "AgeInYears");
-            builder.AddAttribute(3, "Width", "80px");
+            builder.AddAttribute(3, "Width", "600px");
             builder.AddAttribute(4, "HeaderClass", "red-column-border");
             //builder.AddAttribute(5, "OnCellRender", EventCallback.Factory.Create(builder, ()=>OnCellBorderRender(builder)));
             builder.CloseComponent();
